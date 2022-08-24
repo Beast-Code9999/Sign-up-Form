@@ -1,0 +1,22 @@
+{
+  "name": "sign-up-form",
+  "version": "1.0.0",
+  "description": "Sign up now and win $1,000 no guarantee",
+  "main": "script.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Beast-Code9999/Sign-up-Form.git"
+  },
+  "author": "Beast Code",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Beast-Code9999/Sign-up-Form/issues"
+  },
+  "homepage": "https://github.com/Beast-Code9999/Sign-up-Form#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
