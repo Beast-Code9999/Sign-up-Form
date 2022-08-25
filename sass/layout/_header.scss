@@ -1,19 +1,33 @@
+
+
 .header {
     height: 15vh;
-    background-color: #fff;
+    background-color: rgb(218, 172, 172);
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
 
     &__logo-box {
-
-
+        background-color: rgb(255, 255, 255);
+        width: auto;
         & img {
 
         }
     }
 
     &__list {
-        background-color: blue;
+        background-color: white;
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+    }
 
+    &__item {
+        &--special {
+            width: 2rem;
+        }
     }
 }

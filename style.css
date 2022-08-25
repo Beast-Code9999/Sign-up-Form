@@ -11,10 +11,26 @@ html {
 body {
   box-sizing: border-box; }
 
+.header__list {
+  font-size: 1.6rem;
+  color: #444;
+  list-style-type: none; }
+
 .header {
   height: 15vh;
-  background-color: #fff;
+  background-color: #daacac;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  align-items: center; }
+  .header__logo-box {
+    background-color: white;
+    width: auto; }
   .header__list {
-    background-color: blue; }
+    background-color: white;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem; }
+  .header__item--special {
+    width: 2rem; }
