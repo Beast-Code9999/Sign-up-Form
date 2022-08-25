@@ -1,0 +1,19 @@
+.header {
+    height: 15vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+
+    &__logo-box {
+
+
+        & img {
+
+        }
+    }
+
+    &__list {
+        background-color: blue;
+
+    }
+}

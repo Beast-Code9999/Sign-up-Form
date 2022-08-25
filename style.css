@@ -1,0 +1,20 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+.header {
+  height: 15vh;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between; }
+  .header__list {
+    background-color: blue; }
