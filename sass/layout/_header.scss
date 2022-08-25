@@ -1,19 +1,17 @@
 
 
 .header {
-    height: 15vh;
+    height: 20vh;
     background-color: rgb(218, 172, 172);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 5rem 10rem;
 
 
     &__logo-box {
         background-color: rgb(255, 255, 255);
         width: auto;
-        & img {
-
-        }
     }
 
     &__list {
@@ -22,10 +20,21 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 1.5rem;
+        gap: 4rem;
     }
 
     &__item {
+
+        &--log-in {
+            border-bottom: 3px solid $color-primary;
+        }
+
+        &--get-started {
+            background-color: $color-quirky;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+
         &--special {
             width: 2rem;
         }
