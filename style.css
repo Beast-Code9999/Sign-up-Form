@@ -29,6 +29,13 @@ body {
 
 .heading-primary {
   font-size: 6rem; }
+  .heading-primary--main {
+    color: white;
+    font-size: 3rem;
+    font-weight: 600; }
+  .heading-primary--sub {
+    color: white;
+    font-size: 1.6rem; }
 
 .heading-secondary {
   font-size: 4rem; }
@@ -82,6 +89,9 @@ body {
   padding: 5rem 10rem;
   height: 150vh;
   background: linear-gradient(to bottom, white, #00b3ca, #114e7b); }
+  .section-main > span > h2 {
+    color: black;
+    font-weight: 500; }
   .section-main__container {
     width: 80%;
     height: 60%;
@@ -95,4 +105,8 @@ body {
   .section-main__img {
     width: 55%;
     height: 100%;
-    background-image: linear-gradient(45deg, rgba(0, 179, 202, 0.801), rgba(17, 78, 123, 0.801)), url(/img/pattern-gd17f63c16_1280.jpg); }
+    background-image: linear-gradient(45deg, rgba(0, 179, 202, 0.801), rgba(17, 78, 123, 0.801)), url(/img/pattern-gd17f63c16_1280.jpg);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }

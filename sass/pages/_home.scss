@@ -3,6 +3,10 @@
     height: 150vh;
     background: linear-gradient(to bottom, white, $color-primary-light, $color-primary-dark);
 
+    & > span > h2{
+        color: black;
+        font-weight: 500;
+    }
 
     &__container {
         width: 80%;
@@ -27,5 +31,10 @@
                     rgba($color-primary-light, 0.801),
                     rgba($color-primary-dark, 0.801)),
                 url(/img/pattern-gd17f63c16_1280.jpg);
+        
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
  } 

@@ -23,6 +23,18 @@ body {
 
 .heading-primary {
     font-size: 6rem;
+
+    &--main {
+        color: white;
+        font-size: 3rem;
+        font-weight: 600;
+    }
+
+    &--sub {
+        color: white;
+        font-size: $default-font-size;
+    }
+
 }
 
 .heading-secondary {
@@ -31,4 +43,6 @@ body {
 
 .heading-tertiary {
     font-size: 2rem;
+
+
 }
