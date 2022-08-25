@@ -27,9 +27,30 @@ body {
   .header__item--get-started {
     color: white; }
 
+.heading-primary {
+  font-size: 6rem; }
+
+.heading-secondary {
+  font-size: 4rem; }
+
+.heading-tertiary {
+  font-size: 2rem; }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem; }
+
+.u-margin-bottom-small {
+  margin-bottom: 2rem; }
+
 .header {
   height: 20vh;
-  background-color: #daacac;
+  background-color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,8 +68,13 @@ body {
   .header__item--log-in {
     border-bottom: 3px solid #267bbc; }
   .header__item--get-started {
-    background-color: #b37614;
+    background-color: #267bbc;
     padding: 1rem;
     border-radius: 5px; }
   .header__item--special {
     width: 2rem; }
+
+.section-form {
+  padding: 5rem 10rem;
+  height: 150vh;
+  background: linear-gradient(to bottom, white, #00b3ca, #114e7b); }

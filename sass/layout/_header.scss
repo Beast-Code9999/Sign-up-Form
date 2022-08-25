@@ -1,11 +1,11 @@
 .header {
     height: 20vh;
-    background-color: rgb(218, 172, 172);
+    background-color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5rem 10rem;
-
+    // margin-bottom: 10rem;
 
     &__logo-box {
         background-color: rgb(255, 255, 255);
@@ -28,7 +28,7 @@
         }
 
         &--get-started {
-            background-color: $color-quirky;
+            background-color: $color-primary;
             padding: 1rem;
             border-radius: 5px;
         }
