@@ -3,5 +3,29 @@
     height: 150vh;
     background: linear-gradient(to bottom, white, $color-primary-light, $color-primary-dark);
 
-    
+
+    &__container {
+        width: 80%;
+        height: 60%;
+        background-color: #fff;
+        margin: 0 auto;
+        display: flex;
+    }
+
+    &__form {
+        width: 45%;
+        height: 100%;
+        background-color: #fff;
+    }
+
+    &__img {
+        width: 55%;
+        height: 100%;
+        background-image:
+            linear-gradient(
+                    45deg,
+                    rgba($color-primary-light, 0.801),
+                    rgba($color-primary-dark, 0.801)),
+                url(/img/pattern-gd17f63c16_1280.jpg);
+    }
  } 
