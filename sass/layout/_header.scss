@@ -5,6 +5,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 5rem 10rem;
+    
     // margin-bottom: 10rem;
 
     &__logo-box {
@@ -19,18 +20,13 @@
         justify-content: center;
         align-items: center;
         gap: 4rem;
+        font-weight: 500;
     }
 
     &__item {
 
         &--log-in {
             border-bottom: 3px solid $color-primary;
-        }
-
-        &--get-started {
-            background-color: $color-primary;
-            padding: 1rem;
-            border-radius: 5px;
         }
 
         &--special {
