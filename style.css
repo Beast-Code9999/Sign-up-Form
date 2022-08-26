@@ -66,7 +66,7 @@ body {
   background-color: white;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center; }
   .logo-box__img {
     width: 15rem; }
@@ -76,15 +76,35 @@ body {
     color: #777; }
 
 .footer {
-  background-color: black;
-  height: 21.5rem; }
+  background-color: white;
+  height: 50vh; }
   .footer__container {
-    display: flex; }
+    display: flex;
+    padding: 3rem; }
   .footer__social-media {
-    flex-grow: 1; }
+    width: 30%;
+    display: flex;
+    flex-direction: column; }
+    .footer__social-media h3 {
+      text-align: left;
+      font-size: 1.6rem;
+      font-weight: 100;
+      padding-left: 1rem;
+      width: 30rem; }
+  .footer__logo {
+    width: 100%;
+    display: flex;
+    justify-content: left; }
+  .footer__imgs {
+    width: 100%;
+    height: 10rem;
+    background-color: white;
+    display: flex;
+    gap: 4rem; }
+    .footer__imgs img {
+      width: 4.5rem; }
   .footer__start-learning {
-    width: auto;
-    flex-grow: 3;
+    width: 70%;
     background-color: red; }
 
 .header {
