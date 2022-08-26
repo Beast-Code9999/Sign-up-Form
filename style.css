@@ -60,7 +60,10 @@ body {
   padding: 1rem;
   border-radius: 5px;
   color: white;
-  font-weight: 600; }
+  font-size: 1.6rem;
+  font-weight: 500; }
+  .btn--special:hover {
+    cursor: pointer; }
 
 .logo-box {
   background-color: white;
@@ -73,14 +76,19 @@ body {
   .logo-box__header {
     font-family: 'Orbitron', sans-serif, monospace;
     font-size: 2rem;
-    color: #777; }
+    color: #777;
+    font-weight: 700; }
 
 .footer {
   background-color: white;
-  height: 50vh; }
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 9rem; }
   .footer__container {
     display: flex;
-    padding: 3rem; }
+    display: flex;
+    justify-content: space-between; }
   .footer__social-media {
     width: 30%;
     display: flex;
@@ -88,7 +96,7 @@ body {
     .footer__social-media h3 {
       text-align: left;
       font-size: 1.6rem;
-      font-weight: 100;
+      font-weight: 300;
       padding-left: 1rem;
       width: 30rem; }
   .footer__logo {
@@ -102,10 +110,19 @@ body {
     display: flex;
     gap: 4rem; }
     .footer__imgs img {
-      width: 4.5rem; }
+      width: 5rem; }
   .footer__start-learning {
-    width: 70%;
+    width: 50%;
     background-color: red; }
+
+.footer__info {
+  display: flex;
+  gap: 5rem;
+  padding-bottom: 4rem; }
+  .footer__info__link {
+    text-decoration: none;
+    color: black;
+    font-size: 1.6rem; }
 
 .header {
   height: 20vh;
@@ -168,7 +185,8 @@ body {
   flex-direction: column;
   align-items: center; }
   .section-login__header {
-    font-weight: 100; }
+    font-weight: 100;
+    font-size: 3rem; }
   .section-login__link {
     margin: 0 auto;
     text-decoration: none;

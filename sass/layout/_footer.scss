@@ -1,10 +1,14 @@
 .footer {
     background-color: white;
     height: 50vh;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 9rem;
 
     &__container {
         display: flex;
-        padding: 3rem;
+        display: flex;
+        justify-content: space-between;
     }
 
     &__social-media  {
@@ -16,7 +20,7 @@
         & h3 {
             text-align: left;
             font-size: $default-font-size;
-            font-weight: 100;
+            font-weight: 300;
             padding-left: 1rem;
             width: 30rem;
         }
@@ -36,13 +40,28 @@
         gap: 4rem;
 
         & img {
-            width: 4.5rem;
+            width: 5rem;
         }
     }
 
     &__start-learning {
-        width: 70%;
+        width: 50%;
         background-color: red;
     }
     
+}
+
+.footer {
+
+    &__info {
+        display: flex;
+        gap: 5rem;
+        padding-bottom: 4rem;
+
+        &__link {
+            text-decoration: none;
+            color: black;
+            font-size: $default-font-size;
+        }
+    }
 }
