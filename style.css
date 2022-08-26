@@ -61,7 +61,8 @@ body {
   border-radius: 5px;
   color: white;
   font-size: 1.6rem;
-  font-weight: 500; }
+  font-weight: 500;
+  border: none; }
   .btn--special:hover {
     cursor: pointer; }
 
@@ -105,15 +106,33 @@ body {
     justify-content: left; }
   .footer__imgs {
     width: 100%;
-    height: 10rem;
+    height: 100%;
     background-color: white;
     display: flex;
     gap: 4rem; }
     .footer__imgs img {
       width: 5rem; }
   .footer__start-learning {
-    width: 50%;
-    background-color: red; }
+    width: MIN(50%, 47rem);
+    height: 100%;
+    background-color: #f3f4f6;
+    padding: 4rem 4rem 0 4rem;
+    border-radius: 10px; }
+    .footer__start-learning h2 {
+      color: black;
+      font-size: 2.5rem; }
+    .footer__start-learning div.input {
+      display: inline-block;
+      outline: 1px solid rgba(0, 0, 0, 0.2);
+      padding: 3.5px;
+      padding-left: 15px;
+      background-color: #fff;
+      border-radius: 5px; }
+      .footer__start-learning div.input #email {
+        height: 4.5rem;
+        width: 25rem;
+        border: none;
+        font-size: 1.6rem; }
 
 .footer__info {
   display: flex;
