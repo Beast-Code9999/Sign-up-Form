@@ -71,7 +71,16 @@ body {
   padding: 5rem 10rem; }
   .header__logo-box {
     background-color: white;
-    width: auto; }
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .header__logo-box img {
+      width: 15rem; }
+    .header__logo-box h3 {
+      font-family: 'Orbitron', sans-serif, monospace;
+      font-size: 2rem;
+      color: #777; }
   .header__list {
     background-color: white;
     width: auto;
