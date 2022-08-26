@@ -1,8 +1,7 @@
  .section-main {
     padding: 5rem 10rem;
     height: 150vh;
-    background: linear-gradient(to bottom, white, $color-primary-light, $color-primary-dark);
-
+    background-image: linear-gradient(to bottom, #fff, #eee);
     & > span > h2{
         color: black;
         font-weight: 500;
@@ -14,6 +13,7 @@
         background-color: #fff;
         margin: 0 auto;
         display: flex;
+        box-shadow: 0px 15px 30px rgba(0,0,0,0.15);
     }
 
     &__form {
