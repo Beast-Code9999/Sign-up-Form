@@ -62,30 +62,48 @@ body {
   color: white;
   font-weight: 600; }
 
+.logo-box {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .logo-box__img {
+    width: 15rem; }
+  .logo-box__header {
+    font-family: 'Orbitron', sans-serif, monospace;
+    font-size: 2rem;
+    color: #777; }
+
+.footer {
+  background-color: black;
+  height: 21.5rem; }
+  .footer__container {
+    display: flex; }
+  .footer__social-media {
+    flex-grow: 1; }
+  .footer__start-learning {
+    width: auto;
+    flex-grow: 3;
+    background-color: red; }
+
 .header {
   height: 20vh;
   background-color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5rem 10rem; }
-  .header__logo-box {
-    background-color: white;
+  padding: 5rem 10rem;
+  display: flex; }
+  .header__logg {
     width: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    .header__logo-box img {
-      width: 15rem; }
-    .header__logo-box h3 {
-      font-family: 'Orbitron', sans-serif, monospace;
-      font-size: 2rem;
-      color: #777; }
+    flex: 1; }
   .header__list {
+    flex: 4;
     background-color: white;
     width: auto;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     gap: 4rem;
     font-weight: 500; }

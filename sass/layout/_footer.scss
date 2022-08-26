@@ -1,0 +1,19 @@
+.footer {
+    background-color: black;
+    height: 21.5rem;
+
+    &__container {
+        display: flex;
+    }
+
+    &__social-media  {
+        flex-grow: 1;
+    }
+
+    &__start-learning {
+        width: auto;
+        flex-grow: 3;
+        background-color: red;
+    }
+    
+}

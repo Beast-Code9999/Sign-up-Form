@@ -1,0 +1,18 @@
+
+.logo-box {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__img {
+        width: 15rem;
+    }
+
+    &__header {
+        font-family: 'Orbitron', sans-serif, monospace;
+        font-size: 2rem;
+        color: $color-gray-dark;
+    }
+}
