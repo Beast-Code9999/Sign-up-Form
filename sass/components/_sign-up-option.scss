@@ -1,3 +1,53 @@
 .sign-up-option {
-    
+    width: 100%;
+    height: 5rem;
+    color: white;
+    font-size: $default-font-size;
+    font-weight: 600;
+    border-radius: .5rem;
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    &--github {
+        background-color: RGBA(17 24 39);
+
+        &:hover {
+            background-color: RGBA(17, 24, 39, .8);
+        }
+
+        &::before {
+            content: url('/img/icons8-github-96.png');
+            transform: scale(.2);
+            position: absolute;
+            left: 5.25rem;
+        }
+    }
+
+    &--google {
+        background-color: RGB(59 130 246);
+
+        &:hover {
+            background-color: RGB(37,99,235);
+        }
+
+        &::before {
+            content: url('/img/icons8-google-96.png');
+            transform: scale(.2);
+            position: absolute;
+            left: 5.25rem;
+        }
+    }
+
 }

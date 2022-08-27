@@ -4,7 +4,6 @@
 
 .form {
     padding: 1rem;
-    margin-bottom: 3rem;
     display: flex;
     flex-direction: column;
 
@@ -54,13 +53,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        color: rgba($color: $color-gray-dark, $alpha: .9);
+        gap: 2rem;
         
         &::before, &::after {
             content: "";
             display: inline-block;
             width: 10rem;
-            height: .1rem;
-            background-color: rgba($color: black, $alpha: 1.0);
+            height: .2rem;
+            background-color: rgba($color: $color-gray-dark, $alpha: .2);
         }
     }
 }
