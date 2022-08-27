@@ -98,7 +98,8 @@ body {
   .sign-up-option:not(:last-child) {
     margin-bottom: 2rem; }
   .sign-up-option--github {
-    background-color: RGBA(17 24 39); }
+    background-color: RGBA(17 24 39);
+    position: relative; }
     .sign-up-option--github:hover {
       background-color: RGBA(17, 24, 39, 0.8); }
     .sign-up-option--github::before {
@@ -107,6 +108,7 @@ body {
       position: absolute;
       left: 5.25rem; }
   .sign-up-option--google {
+    position: relative;
     background-color: RGB(59 130 246); }
     .sign-up-option--google:hover {
       background-color: RGB(37, 99, 235); }

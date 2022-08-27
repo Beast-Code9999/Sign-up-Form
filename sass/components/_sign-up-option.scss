@@ -22,7 +22,8 @@
 
     &--github {
         background-color: RGBA(17 24 39);
-
+        position: relative;
+        
         &:hover {
             background-color: RGBA(17, 24, 39, .8);
         }
@@ -36,6 +37,7 @@
     }
 
     &--google {
+        position: relative;
         background-color: RGB(59 130 246);
 
         &:hover {
