@@ -143,6 +143,34 @@ body {
     color: black;
     font-size: 1.6rem; }
 
+.section-main__form {
+  padding: 4rem 5rem; }
+
+.form {
+  padding: 1rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column; }
+  .form__section {
+    background-color: #f7f7f7;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: .5rem; }
+    .form__section:not(:last-child) {
+      margin-bottom: 2rem; }
+  .form__label > img {
+    width: 3rem;
+    height: auto; }
+  .form__input {
+    padding: 1rem 0.5rem 1rem 1.75rem;
+    font-family: inherit;
+    font-size: 1.6rem;
+    border: none;
+    background-color: transparent; }
+    .form__input:focus {
+      outline: none; }
+
 .header {
   height: 20vh;
   background-color: #fff;
@@ -180,8 +208,8 @@ body {
     color: black;
     font-weight: 500; }
   .section-main__container {
-    width: 80%;
-    height: 60%;
+    width: 90%;
+    height: 70%;
     background-color: #fff;
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
     margin: 0 auto;
