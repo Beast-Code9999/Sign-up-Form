@@ -11,6 +11,7 @@
     &__section {
         background-color: $color-input-background;
         display: flex;
+        justify-content: center;
         align-items: center;
         margin-bottom: 2rem;
         padding: .5rem;
@@ -41,4 +42,25 @@
         }
     }
 
+    &__link {
+        color: $color-gray-dark
+    }
+}
+
+.form-divider {
+
+
+    &__text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        &::before, &::after {
+            content: "";
+            display: inline-block;
+            width: 10rem;
+            height: .1rem;
+            background-color: rgba($color: black, $alpha: 1.0);
+        }
+    }
 }

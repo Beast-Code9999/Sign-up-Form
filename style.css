@@ -154,6 +154,7 @@ body {
   .form__section {
     background-color: #f7f7f7;
     display: flex;
+    justify-content: center;
     align-items: center;
     margin-bottom: 2rem;
     padding: .5rem; }
@@ -170,6 +171,19 @@ body {
     background-color: transparent; }
     .form__input:focus {
       outline: none; }
+  .form__link {
+    color: #777; }
+
+.form-divider__text {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .form-divider__text::before, .form-divider__text::after {
+    content: "";
+    display: inline-block;
+    width: 10rem;
+    height: .1rem;
+    background-color: black; }
 
 .header {
   height: 20vh;
