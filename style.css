@@ -250,13 +250,15 @@ body {
     width: 2rem; }
 
 #main {
-  height: 200vh;
-  background-image: linear-gradient(to bottom, #fff, #eee); }
+  height: 180vh;
+  background-image: linear-gradient(to bottom, #fff, #eee);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; }
 
 .section-main {
   padding: 5rem 10rem;
-  height: 80%;
-  margin-bottom: -15rem; }
+  margin-top: -10vh; }
   .section-main > span > h2 {
     color: black;
     font-weight: 500; }

@@ -1,4 +1,7 @@
 #main {
-    height: 200vh;
+    height: 180vh;
     background-image: linear-gradient(to bottom, #fff, #eee);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
