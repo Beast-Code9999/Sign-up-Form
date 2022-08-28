@@ -18,16 +18,28 @@ const submit = document.getElementById("submit")
 // is too short (minimum is 6 characters)
 // The passwords do not match
 
+// check whether input is valid
+let userValid = false;
+
+// regex to check validity
+const usernameRegex = /.{4,}/g;
+
+console.log(usernameRegex.test(username.value))
 
 formSection.forEach((section) => {
-    console.log(section)
+
     
 })
 
 window.addEventListener('click', (e) => {
-    // console.log(e.target.value)
+    if(usernameRegex.test(username.value) === true) {
+        console.log(section)
+    }
 })
 
+username.addEventListener('keydown', ()=> {
+    console.log(username.value)
+})
 
 submit.addEventListener('click', submitForm);
 
