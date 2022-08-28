@@ -151,11 +151,12 @@ body {
   .footer__imgs {
     width: 100%;
     height: 100%;
-    background-color: white;
     display: flex;
     gap: 4rem; }
     .footer__imgs img {
       width: 5rem; }
+      .footer__imgs img:hover {
+        opacity: .7; }
   .footer__start-learning {
     width: MIN(50%, 47rem);
     height: 100%;
@@ -186,6 +187,8 @@ body {
     text-decoration: none;
     color: black;
     font-size: 1.6rem; }
+    .footer__info__link:hover {
+      opacity: .7; }
 
 .section-main__form {
   padding: 4rem 5rem; }
