@@ -274,13 +274,20 @@ body {
     height: 100%;
     background-color: #fff; }
   .section-main__img {
-    width: auto;
+    width: 55%;
     height: auto;
     background-image: linear-gradient(45deg, rgba(0, 179, 202, 0.801), rgba(17, 78, 123, 0.801)), url(/img/pattern-gd17f63c16_1280.jpg);
-    padding: 2rem;
+    padding: 8rem;
     display: flex;
     flex-direction: column;
-    justify-content: center; }
+    justify-content: center;
+    justify-content: flex-end;
+    gap: 2rem;
+    position: relative; }
+    .section-main__img > span:first-child {
+      position: absolute;
+      top: 8rem;
+      font-size: 5rem; }
 
 .section-login {
   display: flex;

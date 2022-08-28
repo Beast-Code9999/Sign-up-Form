@@ -23,7 +23,7 @@
     }
 
     &__img {
-        width: auto;
+        width: 55%;
         height: auto;
         background-image:
             linear-gradient(
@@ -32,10 +32,19 @@
                     rgba($color-primary-dark, 0.801)),
                 url(/img/pattern-gd17f63c16_1280.jpg);
         
-        padding: 2rem;
+        padding: 8rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        justify-content: flex-end;
+        gap: 2rem;
+        position: relative;
+
+        & > span:first-child {
+            position: absolute;
+            top: 8rem;
+            font-size: 5rem;
+        }
     }
  } 
 
