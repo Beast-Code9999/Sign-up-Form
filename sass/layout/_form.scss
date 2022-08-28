@@ -17,9 +17,7 @@
         
 
         &:not(:nth-child(6))::after {
-            content: "Hello there";
-            color: red;
-            font-size: 1rem;
+
         }
 
         &:not(:last-child) {
@@ -70,5 +68,27 @@
             height: .2rem;
             background-color: rgba($color: $color-gray-dark, $alpha: .2);
         }
+    }
+}
+
+.valid {
+    border: 3px solid green;
+
+    &::after {
+        content: "✔";
+        color: green;
+        font-size: 2rem;
+    }
+}
+
+
+
+.invalid {
+    border: 3px solid red;
+
+    &::after {
+        content: "✖";
+        color: red;
+        font-size: 2rem;
     }
 }

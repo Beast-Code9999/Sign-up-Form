@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -204,10 +205,6 @@ body {
     align-items: center;
     margin-bottom: 2rem;
     padding: .5rem; }
-    .form__section:not(:nth-child(6))::after {
-      content: "Hello there";
-      color: red;
-      font-size: 1rem; }
     .form__section:not(:last-child) {
       margin-bottom: 2rem; }
   .form__label > img {
@@ -236,6 +233,20 @@ body {
     width: 10rem;
     height: .2rem;
     background-color: rgba(119, 119, 119, 0.2); }
+
+.valid {
+  border: 3px solid green; }
+  .valid::after {
+    content: "✔";
+    color: green;
+    font-size: 2rem; }
+
+.invalid {
+  border: 3px solid red; }
+  .invalid::after {
+    content: "✖";
+    color: red;
+    font-size: 2rem; }
 
 .header {
   height: 20vh;
