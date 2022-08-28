@@ -264,6 +264,8 @@ body {
       transform: translateY(-2px); }
   .header__item--special {
     width: 2rem; }
+    .header__item--special:hover {
+      cursor: pointer; }
 
 #main {
   height: 180vh;
