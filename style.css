@@ -73,12 +73,14 @@ body {
   justify-content: left;
   align-items: center; }
   .logo-box__img {
-    width: 15rem; }
+    width: 15rem;
+    user-select: none; }
   .logo-box__header {
     font-family: 'Orbitron', sans-serif, monospace;
     font-size: 2rem;
     color: #777;
-    font-weight: 700; }
+    font-weight: 700;
+    user-select: none; }
 
 .sign-up-option {
   width: 100%;
@@ -97,6 +99,10 @@ body {
     cursor: pointer; }
   .sign-up-option:not(:last-child) {
     margin-bottom: 2rem; }
+  .sign-up-option--main {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #267bbc; }
   .sign-up-option--github {
     background-color: RGBA(17 24 39);
     position: relative; }
@@ -232,7 +238,7 @@ body {
   align-items: center;
   padding: 5rem 10rem;
   display: flex; }
-  .header__logg {
+  .header__log0 {
     width: auto;
     flex: 1; }
   .header__list {
@@ -244,6 +250,9 @@ body {
     align-items: center;
     gap: 4rem;
     font-weight: 500; }
+    .header__list > a {
+      text-decoration: none;
+      color: #777; }
   .header__item--log-in {
     border-bottom: 3px solid #267bbc; }
   .header__item--special {

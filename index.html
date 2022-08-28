@@ -20,21 +20,31 @@
             </div>
         </div>
         <ul class="header__list">
-            <li class="header__item">
-                All Paths
-            </li>
-            <li class="header__item">
-                About
-            </li>
-            <li class="header__item">
-                Community
-            </li>
-            <li class="header__item header__item--log-in">
-                Log In
-            </li>
-            <li class="header__item btn--special">
-                Get started
-            </li>
+            <a href="#">
+                <li class="header__item">
+                    All Paths
+                </li>
+            </a>
+            <a href="">
+                <li class="header__item">
+                    About
+                </li>
+            </a>
+            <a href="">
+                <li class="header__item">
+                    Community
+                </li>
+            </a>
+            <a href="">
+                <li class="header__item header__item--log-in">
+                    Log In
+                </li>
+            </a>
+            <a href="">
+                <li class="header__item btn--special">
+                    Get started
+                </li>
+            </a>
             <li class="header__item header__item--special">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>                    
                 </svg>
@@ -61,6 +71,7 @@
                                    name="full-name" 
                                    placeholder="Username"
                                    required="required"
+                                   minlength="4"
                                    class="form__input">
                         </div>
                         <div class="form__section">
@@ -82,7 +93,7 @@
                                    id="phone-number"
                                    name="phone-umber"
                                    placeholder="Phone Number"
-                                   required="required"
+                                   pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$"
                                    class="form__input">
                         </div>
                         <div class="form__section">
@@ -94,6 +105,7 @@
                                    name="user[password]"
                                    placeholder="Password"
                                    required="required"
+                                   minlength="6"
                                    class="form__input">
                         </div>
                         <div class="form__section">
@@ -110,6 +122,11 @@
                         <div class="form__section">
                             <a class="form__link" href="#" target="_blank">By signing up, you agree to our terms of use.</a>
                         </div>
+                        <input type="submit"
+                               name="commit"
+                               value="sign-up"
+                               class="sign-up-option sign-up-option--main">
+                               
                     </form>
                     <div class="form-divider u-center-text u-margin-bottom-small">
                         <span class="form-divider__text">OR SIGN UP WITH</span>

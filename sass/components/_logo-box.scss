@@ -8,6 +8,7 @@
 
     &__img {
         width: 15rem;
+        user-select: none;
     }
 
     &__header {
@@ -15,5 +16,6 @@
         font-size: 2rem;
         color: $color-gray-dark;
         font-weight: 700;
+        user-select: none;
     }
 }

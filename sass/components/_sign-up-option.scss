@@ -20,6 +20,12 @@
         margin-bottom: 2rem;
     }
 
+    &--main {
+        width: 90%;
+        margin: 0 auto;
+        background-color: $color-primary;
+    }
+
     &--github {
         background-color: RGBA(17 24 39);
         position: relative;
