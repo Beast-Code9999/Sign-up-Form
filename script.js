@@ -22,28 +22,38 @@ const submit = document.getElementById("submit")
 let userValid = false;
 
 // regex to check validity
-const usernameRegex = /.{4,}/g;
+const usernameRegex = /.{4,}/;
 
+
+
+
+username.addEventListener('click', (e)=> {
+  
 console.log(usernameRegex.test(username.value))
 
-formSection.forEach((section) => {
-
-    
-})
-
-window.addEventListener('click', (e) => {
-    if(usernameRegex.test(username.value) === true) {
-        console.log(section)
+    if(usernameRegex.test(username.value)) {
+        console.log(username.value)
+        userValid = true;
     }
+    if(!usernameRegex.test(username.value)) {
+        console.log(username.value)
+
+        userValid = false;
+    }
+
+    console.log(userValid)
+    formSection.forEach((section) => {
+        if(userValid === false) {
+            // section.classList.toggle("")
+        }
+        
+    })
 })
 
-username.addEventListener('keydown', ()=> {
-    console.log(username.value)
-})
+// console.log(userValid)
 
 submit.addEventListener('click', submitForm);
 
 function submitForm(e) {
-    console.log(username.value)
-    console.log(e)
+
 }
