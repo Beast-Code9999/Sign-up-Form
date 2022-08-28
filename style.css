@@ -256,8 +256,12 @@ body {
     .header__list > a {
       text-decoration: none;
       color: #777; }
+  .header__item--hover:hover {
+    border-bottom: 3px solid #267bbc; }
   .header__item--log-in {
     border-bottom: 3px solid #267bbc; }
+    .header__item--log-in:hover {
+      transform: translateY(-2px); }
   .header__item--special {
     width: 2rem; }
 
