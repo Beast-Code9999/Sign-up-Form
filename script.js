@@ -5,6 +5,7 @@ const emailContainer = document.getElementById("email-container");
 const phoneContainer = document.getElementById("number-container");
 const passwordContainer = document.getElementById("password-container");
 const passwordConfirmationContainer = document.getElementById("password_confirmation-container");
+const newElement = document.createElement("div.invalid-message")
 // const username = document.getElementById("username");
 // const email = document.getElementById("email");
 // const phoneNumber = document.getElementById("phone-number");
@@ -18,7 +19,7 @@ window.addEventListener('click', activeElement)
 
 function activeElement() {
     input.forEach((input) => {
-        checkValidity(input, "username", usernameRegex);
+        checkValidity(input, "username", usernameRegex, "at least 4 characters");
         checkValidity(input, "email", emailRegex);
         checkValidity(input, "phone-number", phoneNumberRegex)
         checkValidity(input, "user_password", passwordRegex)
@@ -26,24 +27,35 @@ function activeElement() {
 }
 
 // function to check if username, email, and password is valid 
-function checkValidity(input, idName, regex) {
+function checkValidity(input, idName, regex, message) {
     if(input.id === idName) {
         console.log(input.value)
         if (input.value === "") {
             input.parentElement.classList.remove("valid");
             input.parentElement.classList.remove("invalid");
+
         }
         else if(regex.test(input.value) === false && input.value !== "" && input !== document.activeElement) {
             input.parentElement.classList.remove("valid")
             input.parentElement.classList.add('invalid')
+            insertAfter(newElement, input.parentElement, message)
         }
         else if (regex.test(input.value) === true) {
             input.parentElement.classList.remove("invalid")
             input.parentElement.classList.add("valid")
         }
-            
+        
     }
 }
+
+// create a function to insert an element after each input in case the input value is invalid
+
+function insertAfter(el, referenceNode, message) {
+    newElement.innerHTML = `<p>${message}</p>`
+    referenceNode.parentNode.insertBefore(el, referenceNode.nextSibling);
+}
+
+
 // is too short (minimum is 4 characters)
 // Is not a valid email
 // is too short (minimum is 6 characters)
