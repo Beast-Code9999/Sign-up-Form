@@ -248,6 +248,13 @@ body {
     color: red;
     font-size: 2rem; }
 
+div[class$="message"] {
+  color: red;
+  font-size: 1.4rem;
+  font-weight: 600;
+  top: 5rem;
+  transform: translateY(-1.6rem); }
+
 .header {
   height: 20vh;
   background-color: #fff;
