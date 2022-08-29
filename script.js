@@ -74,15 +74,43 @@ function changeValidity(inputElement, state) {
 // add Error message
 function addErrorMessage() {
     if(userValid === false && Array.from(form.querySelectorAll('.invalid-username-message')).length < 1) {
-        insertAfter(createErrorMessage("username-message", "hello world"), usernameConatainer)
+        console.log("d")
+        insertAfter(createErrorMessage("username-message", "is too short (minimum is 4 characters)"), usernameConatainer)
     }
     else if(userValid !== false) {
         const child = document.querySelector(".invalid-username-message")
-        console.log(child)
         if(child !== null) {
             child.parentNode.removeChild(child);
         }
     }
+    if(emailValid === false && Array.from(form.querySelectorAll('.invalid-email-message')).length < 1) {
+        insertAfter(createErrorMessage("email-message", "Is not a valid email"), emailContainer)
+    }
+    else if(emailValid !== false) {
+        const child = document.querySelector(".invalid-email-message")
+        if(child !== null) {
+            child.parentNode.removeChild(child);
+        }
+    }
+    if(phoneValid === false && Array.from(form.querySelectorAll('.invalid-phone-number-message')).length < 1) {
+        insertAfter(createErrorMessage("phone-number-message", "Number is either invalid or location unregistered"), phoneContainer)
+    }
+    else if(phoneValid !== false) {
+        const child = document.querySelector(".invalid-phone-number-message")
+        if(child !== null) {
+            child.parentNode.removeChild(child);
+        }
+    }
+    if(passwordValid === false && Array.from(form.querySelectorAll('.invalid-password-message')).length < 1) {
+        insertAfter(createErrorMessage("password-message", "Is too short (minimum is 6 characters)"), passwordContainer)
+    }
+    else if(passwordValid !== false) {
+        const child = document.querySelector(".invalid-password-message")
+        if(child !== null) {
+            child.parentNode.removeChild(child);
+        }
+    }
+    
 }
 
 window.addEventListener("click", () => {
