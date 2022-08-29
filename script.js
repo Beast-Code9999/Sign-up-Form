@@ -18,14 +18,14 @@ window.addEventListener('click', activeElement)
 
 function activeElement() {
     input.forEach((input) => {
-        validityCheck(input, "username", usernameRegex);
-        validityCheck(input, "email", emailRegex);
-        validityCheck(input, "user_password", passwordRegex)
+        checkValidity(input, "username", usernameRegex);
+        checkValidity(input, "email", emailRegex);
+        checkValidity(input, "user_password", passwordRegex)
     })
 }
 
 // function to check if username, email, and password is valid 
-function validityCheck(input, idName, regex) {
+function checkValidity(input, idName, regex) {
     if(input.id === idName) {
         console.log(input.value)
         if (input.value === "") {
