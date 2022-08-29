@@ -1,10 +1,11 @@
 const darkMode = document.querySelector(".header__item--special--dark");
 const lightMode = document.querySelector(".header__item--special--light");
-const usernameContainer = document.getElementById("username-container");
+const form = document.getElementById("form");
+console.log(form.querySelector("#username"))
 const emailContainer = document.getElementById("email-container");
-const phoneContainer = document.getElementById("number-container");
-const passwordContainer = document.getElementById("password-container");
-const passwordConfirmationContainer = document.getElementById("password_confirmation-container");
+// const phoneContainer = document.getElementById("number-container");
+// const passwordContainer = document.getElementById("password-container");
+// const passwordConfirmationContainer = document.getElementById("password_confirmation-container");
 // const username = document.getElementById("username");
 // const email = document.getElementById("email");
 // const phoneNumber = document.getElementById("phone-number");
@@ -16,6 +17,7 @@ const submit = document.getElementById("submit");
 
 window.addEventListener('click', activeElement)
 
+// active element validity
 function activeElement() {
     input.forEach((input) => {
         checkValidity(input, "username", usernameRegex, "at least 4 characters");
@@ -23,41 +25,69 @@ function activeElement() {
         checkValidity(input, "phone-number", phoneNumberRegex)
         checkValidity(input, "user_password", passwordRegex)
     })
+
+    console.log(userValid, emailValid, phoneValid, passwordValid)
 }
+
+// check whether input is valid
+let userValid;
+let emailValid;
+let phoneValid;
+let passwordValid;
+
+
 
 // function to check if username, email, and password is valid 
 function checkValidity(input, idName, regex, message) {
     if(input.id === idName) {
-        console.log(input.value)
         if (input.value === "") {
+            changeValidity(input.id, undefined);
             input.parentElement.classList.remove("valid");
             input.parentElement.classList.remove("invalid");
-
         }
         else if(regex.test(input.value) === false && input.value !== "" && input !== document.activeElement) {
-            input.parentElement.classList.remove("valid")
-            input.parentElement.classList.add('invalid')
-            // insertAfter(createErrorMessage(input.id, message), input.parentElement)
+            changeValidity(input.id, false);
+            input.parentElement.classList.remove("valid");
+            input.parentElement.classList.add('invalid');
         }
         else if (regex.test(input.value) === true) {
-            input.parentElement.classList.remove("invalid")
-            input.parentElement.classList.add("valid")
+            changeValidity(input.id, true);
+            input.parentElement.classList.remove("invalid");
+            input.parentElement.classList.add("valid");
             // document.querySelectorAll(`.invalid-${input.id}`).forEach(el => el.remove());
         }
         
     }
 }
 
+function changeValidity(inputElement, state) {
+    switch(inputElement) {
+        case "username":
+            userValid = state;
+            break;
+        case "email":
+            emailValid = state;
+            break;
+        case "phone-number":
+            phoneValid = state;
+            break;
+        case "user_password":
+            passwordValid = state;
+    }
+}
+
+
+insertAfter(createErrorMessage("username", "hello world"), emailContainer)
+
+// create a function that checks for the existence of error message for each input and create them if none exists
 function createErrorMessage(errorElement, message) {
-    if(document.querySelector(`.invalid-${errorElement}` !== null)) {
         const newElement = document.createElement(`div`);
         newElement.classList.add(`invalid-${errorElement}`)
         newElement.innerHTML = `<p>${message}</p>`
         return newElement
-    }
+    
 }
 
-createErrorMessage("hello", "world")
 
 // create a function to insert an element after each input in case the input value is invalid
 
@@ -71,9 +101,6 @@ function insertAfter(el, referenceNode) {
 // is too short (minimum is 6 characters)
 // The passwords do not match
 
-// check whether input is valid
-let userValid = false;
-
 // regex to check validity
 const usernameRegex = /.{4,}/;
 const emailRegex = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
@@ -82,8 +109,6 @@ const phoneNumberRegex = /\+(9[976]\d|8[987530]\d|6[987]\d|5[90]\d|42\d|3[875]\d
 
 
 // console.log(usernameRegex.test(username.value))
-
-
 
 
 submit.addEventListener('click', submitForm);
