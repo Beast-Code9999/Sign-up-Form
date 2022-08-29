@@ -1,18 +1,49 @@
 const darkMode = document.querySelector(".header__item--special--dark");
 const lightMode = document.querySelector(".header__item--special--light");
 const usernameContainer = document.getElementById("username-container");
-const username = document.getElementById("username");
-const emailContainer = document.getElementById("email-container")
-const email = document.getElementById("email");
-const phonContainer = document.getElementById("email-container")
-const phoneNumber = document.getElementById("phone-number");
-const password = document.getElementById("user_password");
-const passwordConfirm = document.getElementById("user_password_confirmation");
+const emailContainer = document.getElementById("email-container");
+const phoneContainer = document.getElementById("number-container");
+const passwordContainer = document.getElementById("password-container");
+const passwordConfirmationContainer = document.getElementById("password_confirmation-container");
+// const username = document.getElementById("username");
+// const email = document.getElementById("email");
+// const phoneNumber = document.getElementById("phone-number");
+// const password = document.getElementById("user_password");
+// const passwordConfirmation = document.getElementById("user_password_confirmation");
+const input = document.querySelectorAll("input")
 const footerInput = document.getElementById("footer__input");
 const submit = document.getElementById("submit")
 
-console.log(usernameContainer)
+window.addEventListener('click', activeElement)
 
+function activeElement() {
+    input.forEach((input) => {
+        usernameCheck(input, "username", usernameRegex)
+    })
+}
+
+// function to check if username is correct 
+function usernameCheck(input, idName, regex) {
+    if(input.id === idName) {
+        console.log(input.value)
+        if (input.value === "") {
+            console.log("this works")
+            input.parentElement.classList.remove("valid");
+            input.parentElement.classList.remove("invalid");
+        }
+        else if(regex.test(input.value) === false && input.value !== "" && input !== document.activeElement) {
+            console.log(regex.test(input.value), input.value)
+            input.parentElement.classList.remove("valid")
+            input.parentElement.classList.add('invalid')
+        }
+        else if (regex.test(input.value) === true) {
+            console.log(regex.test(input.value))
+            input.parentElement.classList.remove("invalid")
+            input.parentElement.classList.add("valid")
+        }
+            
+    }
+}
 // is too short (minimum is 4 characters)
 // Is not a valid email
 // is too short (minimum is 6 characters)
@@ -30,24 +61,6 @@ const passwordRegex = /.{6,}/;
 
 // console.log(usernameRegex.test(username.value))
 
-window.addEventListener('click', (e)=> {
-    // console.log(e.target.id)
-    if (username === document.activeElement) {
-        
-    } else{ 
-        if(usernameRegex.test(username.value)) {
-            // console.log(username.value)
-            userValid = true;
-        }
-        if(!usernameRegex.test(username.value)) {
-            // console.log(username.value)
-            userValid = false;
-        }
-    }
-    // console.log(userValid)
-
-
-})
 
 
 
