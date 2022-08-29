@@ -5,7 +5,6 @@ const emailContainer = document.getElementById("email-container");
 const phoneContainer = document.getElementById("number-container");
 const passwordContainer = document.getElementById("password-container");
 const passwordConfirmationContainer = document.getElementById("password_confirmation-container");
-const newElement = document.createElement("div.invalid-message")
 // const username = document.getElementById("username");
 // const email = document.getElementById("email");
 // const phoneNumber = document.getElementById("phone-number");
@@ -38,20 +37,31 @@ function checkValidity(input, idName, regex, message) {
         else if(regex.test(input.value) === false && input.value !== "" && input !== document.activeElement) {
             input.parentElement.classList.remove("valid")
             input.parentElement.classList.add('invalid')
-            insertAfter(newElement, input.parentElement, message)
+            // insertAfter(createErrorMessage(input.id, message), input.parentElement)
         }
         else if (regex.test(input.value) === true) {
             input.parentElement.classList.remove("invalid")
             input.parentElement.classList.add("valid")
+            // document.querySelectorAll(`.invalid-${input.id}`).forEach(el => el.remove());
         }
         
     }
 }
 
+function createErrorMessage(errorElement, message) {
+    if(document.querySelector(`.invalid-${errorElement}` !== null)) {
+        const newElement = document.createElement(`div`);
+        newElement.classList.add(`invalid-${errorElement}`)
+        newElement.innerHTML = `<p>${message}</p>`
+        return newElement
+    }
+}
+
+createErrorMessage("hello", "world")
+
 // create a function to insert an element after each input in case the input value is invalid
 
-function insertAfter(el, referenceNode, message) {
-    newElement.innerHTML = `<p>${message}</p>`
+function insertAfter(el, referenceNode) {
     referenceNode.parentNode.insertBefore(el, referenceNode.nextSibling);
 }
 
