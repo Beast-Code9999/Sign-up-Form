@@ -1,6 +1,6 @@
 const darkMode = document.querySelector(".header__item--special--dark");
 const lightMode = document.querySelector(".header__item--special--light");
-const form = document.getElementById("form");
+const form = document.getElementById("form-main");
 const input = document.querySelectorAll("input")
 const usernameConatainer = document.getElementById("username-container");
 const emailContainer = document.getElementById("email-container");
@@ -80,7 +80,7 @@ function addErrorMessage() {
         const child = document.querySelector(".invalid-username-message")
         console.log(child)
         if(child !== null) {
-            child.parentNode.removeChild("child")
+            child.parentNode.removeChild(child);
         }
     }
 }
