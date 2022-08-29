@@ -4,10 +4,11 @@ const form = document.getElementById("form");
 const input = document.querySelectorAll("input")
 const usernameConatainer = document.getElementById("username-container");
 const emailContainer = document.getElementById("email-container");
-// const phoneContainer = document.getElementById("number-container");
-// const passwordContainer = document.getElementById("password-container");
-// const passwordConfirmationContainer = document.getElementById("password_confirmation-container");
+const phoneContainer = document.getElementById("number-container");
+const passwordContainer = document.getElementById("password-container");
+const passwordConfirmationContainer = document.getElementById("password_confirmation-container");
 
+console.log(phoneContainer)
 const footerInput = document.getElementById("footer__input");
 const submit = document.getElementById("submit");
 
@@ -72,12 +73,15 @@ function changeValidity(inputElement, state) {
 
 // add Error message
 function addErrorMessage() {
-    if(userValid === false && Array.from(form.querySelectorAll('.invalid-username')).length < 1) {
-        console.log(Array.from(form.querySelectorAll('.invalid-username')).length)
-        insertAfter(createErrorMessage("username", "hello world"), usernameConatainer)
+    if(userValid === false && Array.from(form.querySelectorAll('.invalid-username-message')).length < 1) {
+        insertAfter(createErrorMessage("username-message", "hello world"), usernameConatainer)
     }
-    else if(userValid === true) {
-        
+    else if(userValid !== false) {
+        const child = document.querySelector(".invalid-username-message")
+        console.log(child)
+        if(child !== null) {
+            child.parentNode.removeChild("child")
+        }
     }
 }
 
