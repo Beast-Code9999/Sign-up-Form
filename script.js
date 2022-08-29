@@ -1,17 +1,13 @@
 const darkMode = document.querySelector(".header__item--special--dark");
 const lightMode = document.querySelector(".header__item--special--light");
 const form = document.getElementById("form");
-console.log(form.querySelector("#username"))
+const input = document.querySelectorAll("input")
+const usernameConatainer = document.getElementById("username-container");
 const emailContainer = document.getElementById("email-container");
 // const phoneContainer = document.getElementById("number-container");
 // const passwordContainer = document.getElementById("password-container");
 // const passwordConfirmationContainer = document.getElementById("password_confirmation-container");
-// const username = document.getElementById("username");
-// const email = document.getElementById("email");
-// const phoneNumber = document.getElementById("phone-number");
-// const password = document.getElementById("user_password");
-// const passwordConfirmation = document.getElementById("user_password_confirmation");
-const input = document.querySelectorAll("input")
+
 const footerInput = document.getElementById("footer__input");
 const submit = document.getElementById("submit");
 
@@ -74,10 +70,24 @@ function changeValidity(inputElement, state) {
     }
 }
 
+// add Error message
+function addErrorMessage() {
+    if(userValid === false && Array.from(form.querySelectorAll('.invalid-username')).length < 1) {
+        console.log(Array.from(form.querySelectorAll('.invalid-username')).length)
+        insertAfter(createErrorMessage("username", "hello world"), usernameConatainer)
+    }
+    else if(userValid === true) {
+        
+    }
+}
 
-insertAfter(createErrorMessage("username", "hello world"), emailContainer)
+window.addEventListener("click", () => {
+    addErrorMessage()
+})
 
-// create a function that checks for the existence of error message for each input and create them if none exists
+// insertAfter(createErrorMessage("username", "hello world"), emailContainer)
+
+// create a function that creates an error message when called
 function createErrorMessage(errorElement, message) {
         const newElement = document.createElement(`div`);
         newElement.classList.add(`invalid-${errorElement}`)
@@ -85,7 +95,6 @@ function createErrorMessage(errorElement, message) {
         return newElement
     
 }
-
 
 // create a function to insert an element after each input in case the input value is invalid
 
@@ -103,11 +112,9 @@ function insertAfter(el, referenceNode) {
 const usernameRegex = /.{4,}/;
 const emailRegex = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
 const passwordRegex = /.{6,}/; 
-const phoneNumberRegex = /\+(9[976]\d|8[987530]\d|6[987]\d|5[90]\d|42\d|3[875]\d|2[98654321]\d|9[8543210]|8[6421]|6[6543210]|5[87654321]|4[987654310]|3[9643210]|2[70]|7|1)\W*\d\W*\d\W*\d\W*\d\W*\d\W*\d\W*\d\W*\d\W*(\d{1,2})$/
-
+const phoneNumberRegex = /\+(9[976]\d|8[987530]\d|6[987]\d|5[90]\d|42\d|3[875]\d|2[98654321]\d|9[8543210]|8[6421]|6[6543210]|5[87654321]|4[987654310]|3[9643210]|2[70]|7|1)\W*\d\W*\d\W*\d\W*\d\W*\d\W*\d\W*\d\W*\d\W*(\d{1,2})$/;
 
 // console.log(usernameRegex.test(username.value))
-
 
 submit.addEventListener('click', submitForm);
 
