@@ -1,17 +1,17 @@
 const darkMode = document.querySelector(".header__item--special--dark");
 const lightMode = document.querySelector(".header__item--special--light");
-const formSection = document.querySelectorAll(".form__section")
+const usernameContainer = document.getElementById("username-container");
 const username = document.getElementById("username");
+const emailContainer = document.getElementById("email-container")
 const email = document.getElementById("email");
+const phonContainer = document.getElementById("email-container")
 const phoneNumber = document.getElementById("phone-number");
 const password = document.getElementById("user_password");
 const passwordConfirm = document.getElementById("user_password_confirmation");
 const footerInput = document.getElementById("footer__input");
 const submit = document.getElementById("submit")
 
-// formSection.style.borderBlockColor = "green"
-// formSection.style.borderBlockWidth = "3px"
-// formSection.style.borderBlockStyle = "solid"
+console.log(usernameContainer)
 
 // is too short (minimum is 4 characters)
 // Is not a valid email
@@ -45,22 +45,11 @@ window.addEventListener('click', (e)=> {
         }
     }
     // console.log(userValid)
-    activeSection();
+
 
 })
 
-function activeSection() {
-    formSection.forEach((section) => {
-        if(userValid === false) {
-            if((section.dataset.inputFor === "username")) {
-                section.classList.add('invalid')
-            }
-            else {
-            }
-        }
-        
-    })
-}
+
 
 submit.addEventListener('click', submitForm);
 

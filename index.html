@@ -63,60 +63,60 @@
             <div class="section-main__container">
                 <div class="section-main__form">
                     <form action="#" method="get" class="form u-margin-bottom-small">
-                        <div class="form__section" data-input-for="username">
+                        <div class="form__section" id="username-container">
                             <label for="username"  class="form__label">
                                 <img src="./img/icons8-user-96.png" alt="icon-user">
                             </label>
                             <input type="text"
                                    id="username"
                                    name="full-name" 
-                                   placeholder="Username"
+                                   placeholder="Username*"
                                    required="required"
                                    minlength="4"
                                    class="form__input">
                         </div>
-                        <div class="form__section" data-input-for="email">
+                        <div class="form__section" id="email-container">
                             <label for="email" class="form__label">
                                 <img src="./img/icons8-mail-96.png" alt="icon-mail">
                             </label>
                             <input type="email"
                                    id="email"
                                    name="email"
-                                   placeholder="Email"
+                                   placeholder="Email*"
                                    required="required"
                                    class="form__input">
                         </div>
-                        <div class="form__section" data-input-for="number">
+                        <div class="form__section" id="number-container">
                             <label for="phone-number"  class="form__label">
                                 <img src="./img/icons8-phone-96.png" alt="icon-phone">
                             </label>
                             <input type="tel" 
                                    id="phone-number"
                                    name="phone-umber"
-                                   placeholder="Phone Number"
+                                   placeholder="Phone Number (optional)"
                                    pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$"
                                    class="form__input">
                         </div>
-                        <div class="form__section" data-input-for="password">
+                        <div class="form__section" id="password-container">
                             <label for="user_password" class="form__label">
                                 <img src="./img/icons8-lock-96.png" alt="icon-lock">
                             </label>
                             <input type="password"
                                    id="user_password"
                                    name="user[password]"
-                                   placeholder="Password"
+                                   placeholder="Password*"
                                    required="required"
                                    minlength="6"
                                    class="form__input">
                         </div>
-                        <div class="form__section" data-input-for="password_confirmation">
+                        <div class="form__section" id="password_confirmation-container">
                             <label for="user_password_confirmation"    class="form__label">
                                 <img src="./img/icons8-lock-96.png" alt="icon-lock">
                             </label>
                             <input type="password"
                                    id="user_password_confirmation"
                                    name="user[password_confirmation]"
-                                   placeholder="Password Confirmation"
+                                   placeholder="Password Confirmation*"
                                    required="required"
                                    class="form__input"
                                    autocomplete="off">
