@@ -35,8 +35,6 @@ let emailValid;
 let phoneValid;
 let passwordValid;
 
-
-
 // function to check if username, email, and password is valid 
 function checkValidity(input, idName, regex, message) {
     if(input.id === idName) {
