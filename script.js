@@ -18,26 +18,25 @@ window.addEventListener('click', activeElement)
 
 function activeElement() {
     input.forEach((input) => {
-        usernameCheck(input, "username", usernameRegex)
+        validityCheck(input, "username", usernameRegex);
+        validityCheck(input, "email", emailRegex);
+        validityCheck(input, "user_password", passwordRegex)
     })
 }
 
-// function to check if username is correct 
-function usernameCheck(input, idName, regex) {
+// function to check if username, email, and password is valid 
+function validityCheck(input, idName, regex) {
     if(input.id === idName) {
         console.log(input.value)
         if (input.value === "") {
-            console.log("this works")
             input.parentElement.classList.remove("valid");
             input.parentElement.classList.remove("invalid");
         }
         else if(regex.test(input.value) === false && input.value !== "" && input !== document.activeElement) {
-            console.log(regex.test(input.value), input.value)
             input.parentElement.classList.remove("valid")
             input.parentElement.classList.add('invalid')
         }
         else if (regex.test(input.value) === true) {
-            console.log(regex.test(input.value))
             input.parentElement.classList.remove("invalid")
             input.parentElement.classList.add("valid")
         }
