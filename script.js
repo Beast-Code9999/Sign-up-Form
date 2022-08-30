@@ -9,6 +9,7 @@ const emailContainer = document.getElementById("email-container");
 const phoneContainer = document.getElementById("number-container");
 const passwordContainer = document.getElementById("password-container");
 const passwordConfirmationContainer = document.getElementById("password_confirmation-container");
+const submit = document.getElementById("submit");
 
 const footerInput = document.getElementById("footer__input");
 // const submit = document.getElementById("submit");
@@ -35,7 +36,7 @@ let passwordValid;
 let passwordConfirmationValid;
 
 // function to check if username, email, and password is valid 
-function checkValidity(input, idName, regex, message) {
+function checkValidity(input, idName, regex) {
     if(input.id === idName) {
         if (input.value === "") {
             changeValidity(input.id, undefined);
@@ -57,7 +58,7 @@ function checkValidity(input, idName, regex, message) {
     }
 }
 
-function changeValidity(inputElement, state) {
+function changeValidity(inputElement, state) { //change validity when input.value is either valid or undefined or invalid
     switch(inputElement) {
         case "username":
             userValid = state;
@@ -73,7 +74,7 @@ function changeValidity(inputElement, state) {
     }
 }
 
-// add Error message
+// add Error message when input value is invalid and remove them when input value is undefined or valid
 function addErrorMessage() {
     if(userValid === false && Array.from(form.querySelectorAll('.invalid-username-message')).length < 1) {
         console.log("d")
@@ -112,6 +113,31 @@ function addErrorMessage() {
             child.parentNode.removeChild(child);
         }
     }
+}
+
+window.addEventListener("click", () => {
+    addErrorMessage();
+})
+
+// check password by comparing value of password input and password_confirmation input
+function confirmPassword() {
+    if(userPasswordConfirmation.value === "") passwordConfirmationValid = undefined;
+    else if(userPassword.value === userPasswordConfirmation.value) {
+        passwordConfirmationValid = true;
+        submit.removeAttribute("disabled")
+    }
+    else if(userPassword.value !== userPasswordConfirmation.value) {
+        passwordConfirmationValid = false
+        submit.setAttribute("disabled", "");
+    }
+}
+
+// below is to match password confirmation and password 
+userPasswordConfirmation.addEventListener('input', matchPassword)
+
+function matchPassword() {
+    console.log(this.value)
+    confirmPassword();
     if(passwordConfirmationValid === false && Array.from(form.querySelectorAll('.invalid-password-confirmation-message')).length < 1) {
         insertAfter(createErrorMessage("password-confirmation-message", "Password do not match"), passwordConfirmationContainer)
         passwordConfirmationContainer.classList.remove('valid');
@@ -129,25 +155,7 @@ function addErrorMessage() {
     }  
 }
 
-window.addEventListener("click", () => {
-    addErrorMessage();
-    confirmPassword();
-})
-
-// check password by comparing value of password input and password_confirmation input
-function confirmPassword() {
-    if(userPasswordConfirmation.value === "") passwordConfirmationValid = undefined;
-    else if(userPassword.value === userPasswordConfirmation.value) {
-        passwordConfirmationValid = true;
-    }
-    else if(userPassword.value !== userPasswordConfirmation.value) {
-        passwordConfirmationValid = false
-    }
-}
-
-
 // insertAfter(createErrorMessage("username", "hello world"), emailContainer)
-
 // a function that creates an error message when called
 function createErrorMessage(errorElement, message) {
         const newElement = document.createElement(`div`);
